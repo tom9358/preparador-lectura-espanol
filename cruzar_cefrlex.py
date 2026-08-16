@@ -1,7 +1,6 @@
 import csv
 from pathlib import Path
 
-
 NIVELES = ("a1", "a2", "b1", "b2", "c1")
 
 
@@ -24,21 +23,12 @@ def cargar_elelex(ruta: Path) -> dict[str, dict[str, float]]:
     return datos
 
 
-def nivel_minimo(registro: dict[str, float] | None) -> str:
-    if registro is None:
-        return "sin_datos"
-    for nivel in NIVELES:
-        if registro[f"level_freq@{nivel}"] > 0 and registro[f"nb_doc@{nivel}"] > 0:
-            return nivel.upper()
-    return "sin_datos"
-
-
 def enriquecer(lemas: Path, elelex: Path, salida: Path) -> None:
     datos = cargar_elelex(elelex)
     columnas = [
         "lema",
         "frecuencia_texto",
-        "nivel_minimo_observado",
+        "elelex_encontrado",
         *(
             columna
             for nivel in NIVELES
@@ -56,7 +46,7 @@ def enriquecer(lemas: Path, elelex: Path, salida: Path) -> None:
             salida_fila = {
                 "lema": fila["lema"],
                 "frecuencia_texto": fila["frecuencia"],
-                "nivel_minimo_observado": nivel_minimo(registro),
+                "elelex_encontrado": "sí" if registro else "no",
             }
             for nivel in NIVELES:
                 for prefijo in ("level_freq", "nb_doc"):
