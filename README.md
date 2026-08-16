@@ -4,10 +4,10 @@ Prepara una lectura o una película en otro idioma: extrae vocabulario,
 lo lematiza, lo relaciona con niveles CEFR y muestra ejemplos con contexto.
 La vista HTML permite marcar las palabras ya conocidas.
 
-Este repositorio usa subtítulos de *Encanto* como ejemplo. El mismo flujo
-puede adaptarse a otros textos, idiomas y recursos léxicos; por ejemplo, una
-persona china aprendiendo sueco puede usar subtítulos suecos, un modelo spaCy
-sueco y una lista CEFR sueca.
+Este repositorio usa subtítulos de la película *Encanto* como ejemplo. El mismo
+flujo puede adaptarse a otros textos, idiomas y recursos léxicos; por ejemplo,
+una persona china aprendiendo sueco puede usar textos suecos, un modelo
+spaCy sueco y una lista CEFR sueca.
 
 ## Ejemplo: preparar una película
 
@@ -46,6 +46,18 @@ se guarda localmente y los ejemplos de Tatoeba se cargan desde el navegador.
    idioma. Si su formato es diferente, adapta `cruzar_cefrlex.py`.
 4. Configura `generar_html.py` y Tatoeba con los códigos ISO del idioma de
    aprendizaje y de la traducción.
+
+## Fuente de ELELex
+
+`ELELex.tsv` procede de **ELELex: a CEFR-graded lexical resource for
+Spanish**, disponible para descarga en:
+
+<https://cental.uclouvain.be/cefrlex/elelex/download/>
+
+ELELex es específico para español. Para otro idioma hay que sustituirlo por
+un recurso léxico CEFR compatible y adaptar `cruzar_cefrlex.py` a sus columnas,
+niveles y condiciones de licencia. Consulta también la publicación o
+instrucciones de citación de la fuente original si redistribuyes sus datos.
 
 Los niveles calculados son heurísticos, no clasificaciones oficiales. La
 licencia MIT cubre el código propio. Comprueba por separado las licencias de
