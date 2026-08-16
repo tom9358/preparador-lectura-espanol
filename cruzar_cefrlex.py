@@ -28,6 +28,7 @@ def enriquecer(lemas: Path, elelex: Path, salida: Path) -> None:
     columnas = [
         "lema",
         "frecuencia_texto",
+        "contextos",
         "elelex_encontrado",
         *(
             columna
@@ -46,6 +47,7 @@ def enriquecer(lemas: Path, elelex: Path, salida: Path) -> None:
             salida_fila = {
                 "lema": fila["lema"],
                 "frecuencia_texto": fila["frecuencia"],
+                "contextos": fila["contextos"],
                 "elelex_encontrado": "sí" if registro else "no",
             }
             for nivel in NIVELES:

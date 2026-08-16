@@ -1,84 +1,87 @@
-lema	frecuencia_texto	elelex_encontrado	level_freq@a1	nb_doc@a1	level_freq@a2	nb_doc@a2	level_freq@b1	nb_doc@b1	level_freq@b2	nb_doc@b2	level_freq@c1	nb_doc@c1	nivel_minimo_observado	motivo_seleccion
-revelar	8	sí	0	0	1.9216	1	1.2931	1	56.6914	6	105.313	8	B2	B2/C1
-huracán	6	sí	0	0	2.9415	1	0.7224	1	0	0	26.3283	2	C1	B2/C1
-grieta	6	sí	0	0	0	0	0	0	0	0	18.9428	2	C1	B2/C1
-culpa	6	sí	7.1507	1	2.9415	1	22.9634	5	58.0517	8	71.7298	6	B1	B1 con evidencia B2/C1
-inspiración	6	sí	0	0	0	0	10.6787	3	6.8912	2	8.5078	1	B1	B1 con evidencia B2/C1
-asombroso	5	sí	0	0	0	0	5.1144	2	0	0	17.0156	2	B1	B1 con evidencia B2/C1
-dañar	5	sí	0	0	0	0	4.2521	2	23.2818	4	25.5235	3	B1	B1 con evidencia B2/C1
-orgullo	4	sí	0	0	1.0067	1	3.0199	2	3.4744	1	18.9428	2	B1	B1 con evidencia B2/C1
-ceremonia	4	sí	0	0	2.9415	1	75.9856	14	10.4233	3	297.807	11	B1	B1 con evidencia B2/C1
-burro	4	sí	0	0	1.3169	1	7.8205	3	24.1194	4	26.3283	2	B1	B1 con evidencia B2/C1
-gota	4	sí	7.1507	1	2.9415	1	13.6397	3	17.3266	3	8.5078	1	B1	B1 con evidencia B2/C1
-derrumbar	4	sí	0	0	0	0	0	0	6.8912	2	0	0	B2	B2/C1
-brillo	3	sí	0	0	0	0	0	0	12.2342	2	9.4714	1	B2	B2/C1
-surgir	3	sí	0	0	1.3169	1	68.3588	14	105.995	16	129.764	9	B1	B1 con evidencia B2/C1
-esforzar	2	sí	0	0	0	0	0	0	11.6409	2	26.3283	2	B2	B2/C1
-madrugada	2	sí	0	0	0.022	1	9.9726	3	11.3324	2	17.0156	2	B1	B1 con evidencia B2/C1
-fortalecer	2	sí	6.0172	1	4.2366	1	1.8161	2	3.4744	1	26.3283	2	B1	B1 con evidencia B2/C1
-lamentar	2	sí	0	0	0	0	0	0	22.3091	3	38.1253	3	B2	B2/C1
-enfrentar	2	sí	5.0445	1	0	0	10.8504	4	34.3684	4	38.1253	3	B1	B1 con evidencia B2/C1
-cimiento	2	sí	0	0	0	0	0	0	12.2342	2	0	0	B2	B2/C1
-busca	2	sí	4.954	1	1.3169	1	0.4332	1	22.575	3	26.3283	2	B2	B2/C1
-profecía	2	sí	0	0	0	0	5.3024	2	0	0	102.094	2	B1	B1 con evidencia B2/C1
-cera	2	sí	0	0	1.3169	1	0	0	2.2844	1	26.3283	2	C1	B2/C1
-expansión	2	sí	0	0	2.9415	1	4.8032	2	15.6696	5	52.6565	4	B1	B1 con evidencia B2/C1
-refugio	1	sí	0	0	1.4122	1	5.1144	2	22.7708	3	26.3283	2	B1	B1 con evidencia B2/C1
-descendencia	1	sí	0	0	0	0	0	0	0	0	26.3283	2	C1	B2/C1
-enloquecer	1	sí	0	0	2.9415	1	0	0	0	0	25.5235	3	C1	B2/C1
-caprichoso	1	sí	0	0	0	0	0.7224	1	17.3266	3	8.5078	1	B2	B2/C1
-disculpa	1	sí	0	0	0.1104	1	6.0381	2	15.9925	2	18.9428	2	B1	B1 con evidencia B2/C1
-acaso	1	sí	0	0	0	0	8.4144	3	6.8912	2	8.5078	1	B1	B1 con evidencia B2/C1
-ángel	1	sí	5.3543	1	0	0	12.0689	3	3.4456	1	58.8744	4	B1	B1 con evidencia B2/C1
-aplauso	1	sí	0	0	1.1794	1	0	0	0	0	26.3283	2	C1	B2/C1
-gozar	1	sí	0	0	1.0067	1	22.0187	5	36.2886	5	58.8744	5	B1	B1 con evidencia B2/C1
-colar	1	sí	0	0	0	0	0.8664	2	22.575	3	9.4714	1	B1	B1 con evidencia B2/C1
-florecer	1	sí	0	0	1.0067	1	1.2931	1	4.5688	2	9.4714	1	B2	B2/C1
-invisible	1	sí	7.1507	1	0	0	0	0	0.0607	1	48.776	2	C1	B2/C1
-milagroso	1	sí	0	0	0	0	0.9081	1	0	0	18.9428	2	C1	B2/C1
-cabello	1	sí	7.1507	1	1.4122	1	19.1233	5	3.4456	1	38.1253	2	B1	B1 con evidencia B2/C1
-vulnerable	1	sí	0	0	0	0	0	0	10.8198	2	8.5078	1	B2	B2/C1
-inclinar	1	sí	0	0	0	0	0.7224	1	31.2609	5	9.4714	1	B2	B2/C1
-obvio	1	sí	0	0	0	0	2.5862	2	17.5355	3	38.8023	3	B1	B1 con evidencia B2/C1
-imparable	1	sí	0	0	0	0	0.7908	1	11.6409	2	0	0	B2	B2/C1
-hierro	1	sí	5.0445	1	1.4122	1	14.8654	5	10.4233	3	9.4714	1	B1	B1 con evidencia B2/C1
-diamante	1	sí	0	0	0.5799	1	0	0	6.8912	2	0	0	B2	B2/C1
-fundir	1	sí	0	0	0	0	0.7224	1	0	0	18.9428	2	C1	B2/C1
-partir	1	sí	0	0	0	0	10.6787	3	6.8912	2	65.54	5	B1	B1 con evidencia B2/C1
-balón	1	sí	0	0	1.9216	1	13.8092	3	11.3435	2	0	0	B1	B1 con evidencia B2/C1
-resistir	1	sí	0	0	2.9415	1	12.0762	4	34.3684	4	0	0	B1	B1 con evidencia B2/C1
-quebrar	1	sí	0	0	0	0	1.2931	1	12.2342	2	17.0156	2	B2	B2/C1
-derribar	1	sí	0	0	0	0	0.7224	1	11.3435	2	8.5078	1	B2	B2/C1
-cruel	1	sí	0	0	0	0	1.125	2	1.826	1	38.8023	3	B1	B1 con evidencia B2/C1
-expectativa	1	sí	0	0	0	0	4.2521	2	11.6277	2	26.3283	2	B1	B1 con evidencia B2/C1
-aumento	1	sí	0	0	1.0067	1	25.9959	6	73.7018	9	127.617	10	B1	B1 con evidencia B2/C1
-ignorar	1	sí	0	0	1.4122	1	2.5862	2	3.4456	1	26.3283	2	B1	B1 con evidencia B2/C1
-sostener	1	sí	0	0	0	0	4.8674	2	14.4001	4	52.6565	4	B1	B1 con evidencia B2/C1
-sufrimiento	1	sí	0	0	0	0	8.4144	3	3.4744	1	38.8023	3	B1	B1 con evidencia B2/C1
-fallar	1	sí	4.8253	1	0	0	6.6619	3	3.4744	1	26.3283	2	B1	B1 con evidencia B2/C1
-débil	1	sí	0	0	1.0067	1	10.2422	3	22.0551	3	28.4142	3	B1	B1 con evidencia B2/C1
-cargo	1	sí	4.954	1	1.4122	1	7.7932	2	41.3854	5	174.169	11	B1	B1 con evidencia B2/C1
-retrasar	1	sí	0	0	1.3169	1	0	0	11.3324	2	8.5078	1	B2	B2/C1
-insinuar	1	sí	0	0	0	0	0	0	2.2844	1	18.9428	2	C1	B2/C1
-lazo	1	sí	0	0	1.3169	1	6.0381	2	0	0	18.9428	2	B1	B1 con evidencia B2/C1
-extraer	1	sí	0	0	2.9415	1	30.1454	7	17.7241	3	58.8744	4	B1	B1 con evidencia B2/C1
-entretenimiento	1	sí	0	0	1.1794	1	1.2931	1	18.4738	4	8.5078	1	B2	B2/C1
-división	1	sí	0	0	2.9415	1	0	0	3.4456	1	17.0156	2	C1	B2/C1
-quieto	1	sí	0	0	0	0	0.7224	1	20.908	4	0	0	B2	B2/C1
-va	1	sí	0	0	0	0	5.1723	4	4.5688	2	0	0	B1	B1 con evidencia B2/C1
-nariz	1	sí	0	0	1.9216	1	40.575	10	119.231	12	92.0413	5	B1	B1 con evidencia B2/C1
-pretender	1	sí	0	0	0.1424	1	2.9493	2	56.3949	10	117.814	9	B1	B1 con evidencia B2/C1
-princesa	1	sí	0	0	1.1794	1	48.6283	8	34.4562	4	18.9428	2	B1	B1 con evidencia B2/C1
-impedir	1	sí	0	0	0.022	1	13.6768	6	35.4481	6	65.54	5	B1	B1 con evidencia B2/C1
-imperfecto	1	sí	0	0	0	0	0	0	6.8912	2	9.4714	1	B2	B2/C1
-estructura	1	sí	0	0	2.9415	1	15.7444	4	54.4371	7	64.8818	5	B1	B1 con evidencia B2/C1
-locura	1	sí	0	0	0	0	7.7505	3	3.4456	1	91.3883	4	B1	B1 con evidencia B2/C1
-determinación	1	sí	0	0	0	0	0	0	12.2342	2	8.5078	1	B2	B2/C1
-capaz	1	sí	4.8253	1	1.0521	1	66.5785	11	102.439	7	127.585	11	B1	B1 con evidencia B2/C1
-abeja	1	sí	0	0	1.1794	1	0	0	5.4781	2	0	0	B2	B2/C1
-estallar	1	sí	0	0	0	0	4.5672	2	3.4456	1	78.9848	6	B1	B1 con evidencia B2/C1
-arder	1	sí	0	0	1.3169	1	0	0	17.493	2	18.9428	2	B2	B2/C1
-temor	1	sí	0	0	0	0	2.5862	2	3.4456	1	26.3283	2	B1	B1 con evidencia B2/C1
-vigor	1	sí	0	0	0	0	6.0381	2	14.1566	2	0	0	B1	B1 con evidencia B2/C1
-labor	1	sí	0	0	0	0	10.2315	3	90.3042	9	38.1253	3	B1	B1 con evidencia B2/C1
-flotar	1	sí	7.1507	1	0	0	1.2931	1	3.4456	1	38.8023	3	C1	B2/C1
+lema	frecuencia_texto	contextos	elelex_encontrado	level_freq@a1	nb_doc@a1	level_freq@a2	nb_doc@a2	level_freq@b1	nb_doc@b1	level_freq@b2	nb_doc@b2	level_freq@c1	nb_doc@c1	nivel_minimo_observado	motivo_seleccion
+revelar	8	Y revelando milagros en cada piso. Noche de fiesta, todos llegan para gozar || Sigue bailando, contento en mi paraíso Y revelando milagros en cada piso. || ¡Ahí tienes! Sigue bailando, contento en mi paraíso Y revelando milagros en cada piso. || Y revelando milagros en cada piso. ¡Ahí tienes! Y revelando milagros en cada piso. || Noche de fiesta, todos vienen a celebrar Y revelando milagros en cada piso. Y revelando milagros en cada piso. || Y revelando milagros en cada piso.	sí	0	0	1.9216	1	1.2931	1	56.6914	6	105.313	8	B2	B2/C1
+huracán	6	No controlo el vendaval ni a un huracán. || Boda en un huracán. || Agradece que no es un huracán. || Un huracán de jacarandas.	sí	0	0	2.9415	1	0.7224	1	0	0	26.3283	2	C1	B2/C1
+grieta	6	Las tejas se caían y grietas en todas partes, || Yo no vi las grietas. || Anoche, cuando viste las grietas, || ¿Has vivido aquí reparando las grietas? || Y la vela brillo más fuerte y las grietas... || Las grietas iniciaron contigo.	sí	0	0	0	0	0	0	0	0	18.9428	2	C1	B2/C1
+culpa	6	Y creo que es por culpa mia. || Bruno se fue por culpa tuya. || ¡Por culpa tuya! || El milagro agoniza por culpa tuya. || por culpa mía. || ¡Fue mi culpa!	sí	7.1507	1	2.9415	1	22.9634	5	58.0517	8	71.7298	6	B1	B1 con evidencia B2/C1
+inspiración	6	¿Quién sabrá si es inspiración? || - Ven aquí, ven aquí. - ¿Será inspiración? || ¿Será inspiración? || - ¿Será inspiración? - Tu nueva creación.	sí	0	0	0	0	10.6787	3	6.8912	2	8.5078	1	B1	B1 con evidencia B2/C1
+asombroso	5	Tu eres asombrosa, Mirabel Madrigal. || - Familia asombrosa. - Mirabel. || Porque tengo una asombrosa familia || y una asombrosa casa. || Y un asombroso tú.	sí	0	0	0	0	5.1144	2	0	0	17.0156	2	B1	B1 con evidencia B2/C1
+dañar	5	Luisa, si sabes qué daña la magia || ¿Qué está dañando a la magia? || si voy a dañar a mi familia, || Y claro no sé si supiste yo le dañe su propuesta. || pero no es una excusa para que sigas dañando a esta familia.	sí	0	0	0	0	4.2521	2	23.2818	4	25.5235	3	B1	B1 con evidencia B2/C1
+orgullo	4	Trairás orgullo a tu familia || Traer orgullo a mi familia. || Traer orgullo a tu familia. || y nos llene de orgullo.	sí	0	0	1.0067	1	3.0199	2	3.4744	1	18.9428	2	B1	B1 con evidencia B2/C1
+ceremonia	4	La ceremonia de mi primo será hoy. || La última ceremonia de don fue un fracaso. || Es la primera ceremonia desde la tuya. Están nerviosos. || Si la ceremonia del don, sale bien esta vez,	sí	0	0	2.9415	1	75.9856	14	10.4233	3	297.807	11	B1	B1 con evidencia B2/C1
+burro	4	- Luisa, los burros otras veces salieron. - Ya voy. || El permiso. Vas a hacer que se me caiga un burro. || - ¡Luisa! ¡Los burros! - ¡Ya voy! || esta vez o sentir mal así que agarré a todos los burros	sí	0	0	1.3169	1	7.8205	3	24.1194	4	26.3283	2	B1	B1 con evidencia B2/C1
+gota	4	Es peso que con gota a gota lo reventó. || Peso que con gota a gota lo reventó.	sí	7.1507	1	2.9415	1	13.6397	3	17.3266	3	8.5078	1	B1	B1 con evidencia B2/C1
+derrumbar	4	La magia agoniza, la casa se derrumba en donde Luisa se pierde. || la magia no está agonizando, no se derrumba la casa. || - Tu eres la que derrumba nuestro hogar. - Nunca te atrevas... || Y no hay nada que se pueda derrumbar...	sí	0	0	0	0	0	0	6.8912	2	0	0	B2	B2/C1
+brillo	3	El mundo encantan con su brillo personal. || Para que la vela brilla tienes que darle un abrazo. || Y la vela brillo más fuerte y las grietas...	sí	0	0	0	0	0	0	12.2342	2	9.4714	1	B2	B2/C1
+surgir	3	Lo que en mí va a surgir nadie va a impedir. || - Por surgir (por surgir) Por sembrar (terminar).	sí	0	0	1.3169	1	68.3588	14	105.995	16	129.764	9	B1	B1 con evidencia B2/C1
+esforzar	2	Si no te esforzarás tanto no estorbaría siempre. || - No ves que me esfuerzo. - Sí.	sí	0	0	0	0	0	0	11.6409	2	26.3283	2	B2	B2/C1
+madrugada	2	Abriendo puertas, va llegando la madrugada || Pasan sus noches y madrugadas.	sí	0	0	0.022	1	9.9726	3	11.3324	2	17.0156	2	B1	B1 con evidencia B2/C1
+fortalecer	2	y fortalecer a nuestro hogar? || y ambas familias podrán fortalecer ese.	sí	6.0172	1	4.2366	1	1.8161	2	3.4744	1	26.3283	2	B1	B1 con evidencia B2/C1
+lamentar	2	No me lamento, ¿para qué?. || Y yo lo lamento tanto.	sí	0	0	0	0	0	0	22.3091	3	38.1253	3	B2	B2/C1
+enfrentar	2	Ni a esta pena que empiezo invisible a enfrentar. || Enfrentando profecías sin interpretar.	sí	5.0445	1	0	0	10.8504	4	34.3684	4	38.1253	3	B1	B1 con evidencia B2/C1
+cimiento	2	Ella sostendrá todos los cimientos || Cimientos nuevos podremos vislumbrar.	sí	0	0	0	0	0	0	12.2342	2	0	0	B2	B2/C1
+profecía	2	Enfrentando profecías sin interpretar. || Las profecías se cumplen cada vez.	sí	0	0	0	0	5.3024	2	0	0	102.094	2	B1	B1 con evidencia B2/C1
+cera	2	Palma de cera llena el aire Y va escalando en expansión.	sí	0	0	1.3169	1	0	0	2.2844	1	26.3283	2	C1	B2/C1
+expansión	2	Palma de cera llena el aire Y va escalando en expansión.	sí	0	0	2.9415	1	4.8032	2	15.6696	5	52.6565	4	B1	B1 con evidencia B2/C1
+refugio	1	Y nos bendijo con un refugio donde podríamos vivir.	sí	0	0	1.4122	1	5.1144	2	22.7708	3	26.3283	2	B1	B1 con evidencia B2/C1
+descendencia	1	En este hogar vive nuestra descendencia .	sí	0	0	0	0	0	0	0	0	26.3283	2	C1	B2/C1
+enloquecer	1	(Isabela) con sus flores van a enloquecer.	sí	0	0	2.9415	1	0	0	0	0	25.5235	3	C1	B2/C1
+caprichoso	1	Mas debo decir que es un poco caprichosa Y ya hablé de más, mil gracias, pues me debo retirar.	sí	0	0	0	0	0.7224	1	17.3266	3	8.5078	1	B2	B2/C1
+disculpa	1	Perdón. Disculpa.	sí	0	0	0.1104	1	6.0381	2	15.9925	2	18.9428	2	B1	B1 con evidencia B2/C1
+acaso	1	¿Acaso alguien dijo flores?	sí	0	0	0	0	8.4144	3	6.8912	2	8.5078	1	B1	B1 con evidencia B2/C1
+ángel	1	¡Nuestro ángel!	sí	5.3543	1	0	0	12.0689	3	3.4456	1	58.8744	4	B1	B1 con evidencia B2/C1
+aplauso	1	No aplausos.	sí	0	0	1.1794	1	0	0	0	0	26.3283	2	C1	B2/C1
+gozar	1	Y revelando milagros en cada piso. Noche de fiesta, todos llegan para gozar	sí	0	0	1.0067	1	22.0187	5	36.2886	5	58.8744	5	B1	B1 con evidencia B2/C1
+colar	1	Siguen abiertas y el café se cuela en la casa	sí	0	0	0	0	0.8664	2	22.575	3	9.4714	1	B1	B1 con evidencia B2/C1
+florecer	1	No hago palmas florecer.	sí	0	0	1.0067	1	1.2931	1	4.5688	2	9.4714	1	B2	B2/C1
+invisible	1	Ni a esta pena que empiezo invisible a enfrentar.	sí	7.1507	1	0	0	0	0	0.0607	1	48.776	2	C1	B2/C1
+milagroso	1	Milagroso y mágico.	sí	0	0	0	0	0.9081	1	0	0	18.9428	2	C1	B2/C1
+cabello	1	y su hermoso cabello de un sueño pero...	sí	7.1507	1	1.4122	1	19.1233	5	3.4456	1	38.1253	2	B1	B1 con evidencia B2/C1
+vulnerable	1	Si en la familia supiera cuán vulnerables somos en realidad.	sí	0	0	0	0	0	0	10.8198	2	8.5078	1	B2	B2/C1
+toca	1	Toca a intentar.	sí	0	0	0	0	0	0	0	0	18.9428	2	C1	B2/C1
+inclinar	1	Luisa, mi casa está inclinando.	sí	0	0	0	0	0.7224	1	31.2609	5	9.4714	1	B2	B2/C1
+obvio	1	Es muy obvio que algo te preocupa.	sí	0	0	0	0	2.5862	2	17.5355	3	38.8023	3	B1	B1 con evidencia B2/C1
+imparable	1	Siempre fuerte, imparable.	sí	0	0	0	0	0.7908	1	11.6409	2	0	0	B2	B2/C1
+hierro	1	Mi coraza es del hierro más duro.	sí	5.0445	1	1.4122	1	14.8654	5	10.4233	3	9.4714	1	B1	B1 con evidencia B2/C1
+diamante	1	Rocas, diamantes, se funden, se parten	sí	0	0	0.5799	1	0	0	6.8912	2	0	0	B2	B2/C1
+fundir	1	Rocas, diamantes, se funden, se parten	sí	0	0	0	0	0.7224	1	0	0	18.9428	2	C1	B2/C1
+partir	1	Rocas, diamantes, se funden, se parten	sí	0	0	0	0	10.6787	3	6.8912	2	65.54	5	B1	B1 con evidencia B2/C1
+balón	1	¿Quién soy yo si pierdo con el balón?	sí	0	0	1.9216	1	13.8092	3	11.3435	2	0	0	B1	B1 con evidencia B2/C1
+resistir	1	Como lo resiste, se agarra fuerte.	sí	0	0	2.9415	1	12.0762	4	34.3684	4	0	0	B1	B1 con evidencia B2/C1
+quebrar	1	Si me quiebro.	sí	0	0	0	0	1.2931	1	12.2342	2	17.0156	2	B2	B2/C1
+derribar	1	en alineación Y el viento resoplando lo derriba sin control.	sí	0	0	0	0	0.7224	1	11.3435	2	8.5078	1	B2	B2/C1
+cruel	1	el peso cruel, la expectativas,	sí	0	0	0	0	1.125	2	1.826	1	38.8023	3	B1	B1 con evidencia B2/C1
+expectativa	1	el peso cruel, la expectativas,	sí	0	0	0	0	4.2521	2	11.6277	2	26.3283	2	B1	B1 con evidencia B2/C1
+aumento	1	que va en aumento no importa,	sí	0	0	1.0067	1	25.9959	6	73.7018	9	127.617	10	B1	B1 con evidencia B2/C1
+ignorar	1	que impongan y el resto ignore el	sí	0	0	1.4122	1	2.5862	2	3.4456	1	26.3283	2	B1	B1 con evidencia B2/C1
+sostener	1	Ella sostendrá todos los cimientos	sí	0	0	0	0	4.8674	2	14.4001	4	52.6565	4	B1	B1 con evidencia B2/C1
+sufrimiento	1	Ve también si carga nuestros sufrimientos.	sí	0	0	0	0	8.4144	3	3.4744	1	38.8023	3	B1	B1 con evidencia B2/C1
+fallar	1	Sin fallar.	sí	4.8253	1	0	0	6.6619	3	3.4744	1	26.3283	2	B1	B1 con evidencia B2/C1
+débil	1	yo me sentí... Débil.	sí	0	0	1.0067	1	10.2422	3	22.0551	3	28.4142	3	B1	B1 con evidencia B2/C1
+busca	1	Busca la visión, salva el mila... .	sí	4.954	1	1.3169	1	0.4332	1	22.575	3	26.3283	2	B2	B2/C1
+bienvenido	1	Bienvenida a la familia Madrigal.	sí	4.8253	1	5.8831	1	2.3253	2	11.6277	2	0	0	B1	B1 con evidencia B2/C1
+cargo	1	Mirabel y yo estuvimos conversando sobre cómo cargo demasiado.	sí	4.954	1	1.4122	1	7.7932	2	41.3854	5	174.169	11	B1	B1 con evidencia B2/C1
+retrasar	1	así que traté de no cargar tanto pero eso me retraso en mis tareas	sí	0	0	1.3169	1	0	0	11.3324	2	8.5078	1	B2	B2/C1
+insinuar	1	¿Qué insinuaba?	sí	0	0	0	0	0	0	2.2844	1	18.9428	2	C1	B2/C1
+lazo	1	En lazos con otra.	sí	0	0	1.3169	1	6.0381	2	0	0	18.9428	2	B1	B1 con evidencia B2/C1
+extraer	1	Luisa, ¿quiere extraer el piano por favor?	sí	0	0	2.9415	1	30.1454	7	17.7241	3	58.8744	4	B1	B1 con evidencia B2/C1
+entretenimiento	1	muy además pueden entretenimiento.	sí	0	0	1.1794	1	1.2931	1	18.4738	4	8.5078	1	B2	B2/C1
+división	1	Mira, aunque quisiera hacerlo y no quiero, destruiste mi cueva divisiones.	sí	0	0	2.9415	1	0	0	3.4456	1	17.0156	2	C1	B2/C1
+quieto	1	Las ratas ya me contaron todo. No quieto.	sí	0	0	0	0	0.7224	1	20.908	4	0	0	B2	B2/C1
+va	1	- ¡Creo que vas a salvar la vela! - ¿Cómo?	sí	0	0	0	0	5.1723	4	4.5688	2	0	0	B1	B1 con evidencia B2/C1
+nariz	1	¡Mariano tiene la nariz aplastada como una papaya!	sí	0	0	1.9216	1	40.575	10	119.231	12	92.0413	5	B1	B1 con evidencia B2/C1
+pretender	1	No pretendía arruinarte la vida.	sí	0	0	0.1424	1	2.9493	2	56.3949	10	117.814	9	B1	B1 con evidencia B2/C1
+princesa	1	¡Princesa egoísta!	sí	0	0	1.1794	1	48.6283	8	34.4562	4	18.9428	2	B1	B1 con evidencia B2/C1
+impedir	1	Lo que en mí va a surgir nadie va a impedir.	sí	0	0	0.022	1	13.6768	6	35.4481	6	65.54	5	B1	B1 con evidencia B2/C1
+imperfecto	1	Lo que yo haría al comprender que quiero ser imperfecta.	sí	0	0	0	0	0	0	6.8912	2	9.4714	1	B2	B2/C1
+estructura	1	Descubro nuevas estructuras.	sí	0	0	2.9415	1	15.7444	4	54.4371	7	64.8818	5	B1	B1 con evidencia B2/C1
+locura	1	descubrirá, que locuras.	sí	0	0	0	0	7.7505	3	3.4456	1	91.3883	4	B1	B1 con evidencia B2/C1
+determinación	1	Determinación.	sí	0	0	0	0	0	0	12.2342	2	8.5078	1	B2	B2/C1
+capaz	1	Jamás había sido capaz de volver aquí.	sí	4.8253	1	1.0521	1	66.5785	11	102.439	7	127.585	11	B1	B1 con evidencia B2/C1
+tumbar	1	Tumbando sus paredes, ahí viene nuestro milagro	sí	3.0086	1	1.0521	1	4.7346	2	9.1377	4	28.4142	3	B1	B1 con evidencia B2/C1
+abeja	1	Había abejas en todas partes.	sí	0	0	1.1794	1	0	0	5.4781	2	0	0	B2	B2/C1
+estallar	1	Y esta familia, constelación que estalla.	sí	0	0	0	0	4.5672	2	3.4456	1	78.9848	6	B1	B1 con evidencia B2/C1
+arder	1	Más ardiendo han de alumbrar.	sí	0	0	1.3169	1	0	0	17.493	2	18.9428	2	B2	B2/C1
+temor	1	Mi gran temor los alejó.	sí	0	0	0	0	2.5862	2	3.4456	1	26.3283	2	B1	B1 con evidencia B2/C1
+vigor	1	Un equipo de ensueño hay aquí, ¡qué vigor!	sí	0	0	0	0	6.0381	2	14.1566	2	0	0	B1	B1 con evidencia B2/C1
+labor	1	Comparto la labor y es emocionante.	sí	0	0	0	0	10.2315	3	90.3042	9	38.1253	3	B1	B1 con evidencia B2/C1
+flotar	1	¡Así! Espigas flotando hasta elevar.	sí	7.1507	1	0	0	1.2931	1	3.4456	1	38.8023	3	C1	B2/C1
