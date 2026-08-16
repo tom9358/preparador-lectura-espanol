@@ -1,15 +1,17 @@
 import csv
 import html
+import json
 from pathlib import Path
 
 
 NIVELES = ("C1", "B2", "B1")
 
 
-def generar_html(entrada: Path, salida: Path) -> None:
+def generar_html(entrada: Path, tatoeba: Path, salida: Path) -> None:
     """Genera una página de estudio con las palabras y sus contextos."""
     with entrada.open(encoding="utf-8-sig", newline="") as archivo:
         filas = list(csv.DictReader(archivo, delimiter="\t"))
+    ejemplos_tatoeba = json.loads(tatoeba.read_text(encoding="utf-8"))
 
     secciones = []
     for nivel in NIVELES:
@@ -33,8 +35,11 @@ def generar_html(entrada: Path, salida: Path) -> None:
                     <small>{fila["frecuencia_texto"]} apariciones</small>
                   </h3>
                   <details>
-                    <summary>Ver contexto ({len(contextos)})</summary>
+                    <summary>Ver contexto</summary>
+                    <details><summary>SRT ({len(contextos)})</summary>
                     {"".join(f"<p>{contexto}</p>" for contexto in contextos)}
+                    </details>
+                    {tatoeba_html(ejemplos_tatoeba.get(fila["lema"], {}))}
                   </details>
                 </article>
                 """
@@ -69,10 +74,27 @@ def generar_html(entrada: Path, salida: Path) -> None:
     salida.write_text(documento, encoding="utf-8")
 
 
+def tatoeba_html(datos: dict) -> str:
+    ejemplos = datos.get("ejemplos", [])
+    idioma = datos.get("idioma", "")
+    contenido = []
+    for ejemplo in ejemplos:
+        traducciones = "".join(
+            f"<p>{html.escape(traduccion)}</p>"
+            for traduccion in ejemplo["traducciones"]
+        )
+        contenido.append(
+            f"<details><summary>{html.escape(ejemplo['es'])}</summary>"
+            f"<details><summary>Traducciones ({idioma})</summary>{traducciones}</details></details>"
+        )
+    return f"<details><summary>Tatoeba ({len(ejemplos)})</summary>{''.join(contenido)}</details>"
+
+
 if __name__ == "__main__":
     carpeta = Path(__file__).parent
     generar_html(
         carpeta / "palabras-dificiles.tsv",
+        carpeta / "tatoeba.json",
         carpeta / "vocabulario-dificil.html",
     )
     print("Vista creada: vocabulario-dificil.html")
