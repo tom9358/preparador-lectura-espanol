@@ -33,7 +33,8 @@ def generar_html(entrada: Path, salida: Path) -> None:
                     <small>{fila["frecuencia_texto"]} apariciones</small>
                   </h3>
                   <button class="estado" data-lema="{html.escape(fila["lema"])}"
-                    onclick="alternarEstado(this)">Marcar como conocida</button>
+                    aria-label="Marcar palabra como conocida"
+                    onclick="alternarEstado(this)">○</button>
                   <details><summary>SRT ({len(contextos)})</summary>
                   {"".join(f"<p>{contexto}</p>" for contexto in contextos)}
                   </details>
@@ -65,8 +66,9 @@ def generar_html(entrada: Path, salida: Path) -> None:
     p {{ background: #f5f5f5; padding: .5rem; border-radius: 4px; }}
     article.conocida {{ background: #e8f5e9; border-color: #66bb6a; opacity: .75; }}
     article.conocida h3 {{ text-decoration: line-through; }}
-    button.estado {{ cursor: pointer; margin-bottom: .6rem; padding: .35rem .6rem; }}
-    article.conocida button.estado {{ background: #66bb6a; color: white; }}
+    button.estado {{ border: 0; background: transparent; color: #aaa; cursor: pointer; font-size: 1.1rem; padding: 0 .35rem; }}
+    button.estado:hover {{ color: #555; }}
+    article.conocida button.estado {{ color: #2e7d32; }}
   </style>
   <script>
     const ESTADOS = 'palabras-conocidas';
@@ -76,7 +78,9 @@ def generar_html(entrada: Path, salida: Path) -> None:
       const lema = boton.dataset.lema;
       const activa = Boolean(conocida[lema]);
       boton.closest('article').classList.toggle('conocida', activa);
-      boton.textContent = activa ? 'Marcar como pendiente' : 'Marcar como conocida';
+      boton.textContent = activa ? '✓' : '○';
+      boton.title = activa ? 'Marcar como pendiente' : 'Marcar como conocida';
+      boton.setAttribute('aria-label', boton.title);
     }}
 
     function alternarEstado(boton) {{
