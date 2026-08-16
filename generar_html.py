@@ -32,15 +32,14 @@ def generar_html(entrada: Path, salida: Path) -> None:
                   <h3>{html.escape(fila["lema"])}
                     <small>{fila["frecuencia_texto"]} apariciones</small>
                   </h3>
-                  <details>
-                    <summary>Ver contexto</summary>
-                    <details><summary>SRT ({len(contextos)})</summary>
-                    {"".join(f"<p>{contexto}</p>" for contexto in contextos)}
-                    </details>
-                    <details class="tatoeba" data-lema="{html.escape(fila["lema"])}">
-                      <summary>Tatoeba</summary>
-                      <div class="tatoeba-results">Abrir para cargar ejemplos.</div>
-                    </details>
+                  <button class="estado" data-lema="{html.escape(fila["lema"])}"
+                    onclick="alternarEstado(this)">Marcar como conocida</button>
+                  <details><summary>SRT ({len(contextos)})</summary>
+                  {"".join(f"<p>{contexto}</p>" for contexto in contextos)}
+                  </details>
+                  <details class="tatoeba" data-lema="{html.escape(fila["lema"])}">
+                    <summary>Tatoeba</summary>
+                    <div class="tatoeba-results">Abrir para cargar ejemplos.</div>
                   </details>
                 </article>
                 """
@@ -64,8 +63,34 @@ def generar_html(entrada: Path, salida: Path) -> None:
     h3 {{ margin: 0 0 .5rem; }}
     small {{ color: #666; font-weight: normal; margin-left: .5rem; }}
     p {{ background: #f5f5f5; padding: .5rem; border-radius: 4px; }}
+    article.conocida {{ background: #e8f5e9; border-color: #66bb6a; opacity: .75; }}
+    article.conocida h3 {{ text-decoration: line-through; }}
+    button.estado {{ cursor: pointer; margin-bottom: .6rem; padding: .35rem .6rem; }}
+    article.conocida button.estado {{ background: #66bb6a; color: white; }}
   </style>
   <script>
+    const ESTADOS = 'palabras-conocidas';
+
+    function actualizarEstado(boton) {{
+      const conocida = JSON.parse(localStorage.getItem(ESTADOS) || '{{}}');
+      const lema = boton.dataset.lema;
+      const activa = Boolean(conocida[lema]);
+      boton.closest('article').classList.toggle('conocida', activa);
+      boton.textContent = activa ? 'Marcar como pendiente' : 'Marcar como conocida';
+    }}
+
+    function alternarEstado(boton) {{
+      const conocida = JSON.parse(localStorage.getItem(ESTADOS) || '{{}}');
+      const lema = boton.dataset.lema;
+      conocida[lema] = !conocida[lema];
+      localStorage.setItem(ESTADOS, JSON.stringify(conocida));
+      actualizarEstado(boton);
+    }}
+
+    document.addEventListener('DOMContentLoaded', () => {{
+      document.querySelectorAll('.estado').forEach(actualizarEstado);
+    }});
+
     async function cargarTatoeba(detalle) {{
       if (detalle.dataset.cargado) return;
       const lema = detalle.dataset.lema;
