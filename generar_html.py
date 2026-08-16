@@ -72,6 +72,7 @@ def generar_html(entrada: Path, salida: Path) -> None:
     header {{ display: flex; align-items: center; justify-content: space-between; gap: 1rem; }}
     button.reset {{ border: 1px solid #ccc; border-radius: 999px; background: transparent; color: #666; cursor: pointer; padding: .35rem .7rem; }}
     button.reset:hover {{ background: #f5f5f5; color: #222; }}
+    footer {{ margin: 2rem 0; color: #777; font-size: .85rem; text-align: center; }}
   </style>
   <script>
     const ESTADOS = 'palabras-conocidas';
@@ -146,6 +147,7 @@ def generar_html(entrada: Path, salida: Path) -> None:
     <button class="reset" onclick="reiniciarEstados()">Reiniciar progreso</button>
   </header>
   {"".join(secciones)}
+  <footer><a href="https://github.com/tom9358/preparador-lectura-espanol">Proyecto y README en GitHub</a></footer>
 </body>
 </html>
 """
@@ -156,6 +158,6 @@ if __name__ == "__main__":
     carpeta = Path(__file__).parent
     generar_html(
         carpeta / "palabras-dificiles.tsv",
-        carpeta / "vocabulario-dificil.html",
+        carpeta / "index.html",
     )
-    print("Vista creada: vocabulario-dificil.html")
+    print("Vista creada: index.html")

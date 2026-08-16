@@ -34,7 +34,7 @@ uv run python seleccionar_palabras.py
 uv run python generar_html.py
 ```
 
-El resultado es `vocabulario-dificil.html`. Ábrelo en un navegador; el progreso
+El resultado es `index.html`. Ábrelo en un navegador; el progreso
 se guarda localmente y los ejemplos de Tatoeba se cargan desde el navegador.
 
 ## Estado actual
