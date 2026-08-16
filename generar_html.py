@@ -28,13 +28,11 @@ def generar_html(entrada: Path, salida: Path) -> None:
             ]
             tarjetas.append(
                 f"""
-                <article>
+                <article class="tarjeta" data-lema="{html.escape(fila["lema"])}"
+                  onclick="alternarEstado(this, event)" tabindex="0">
                   <h3>{html.escape(fila["lema"])}
                     <small>{fila["frecuencia_texto"]} apariciones</small>
                   </h3>
-                  <button class="estado" data-lema="{html.escape(fila["lema"])}"
-                    aria-label="Marcar palabra como conocida"
-                    onclick="alternarEstado(this)">○</button>
                   <details><summary>SRT ({len(contextos)})</summary>
                   {"".join(f"<p>{contexto}</p>" for contexto in contextos)}
                   </details>
@@ -66,34 +64,33 @@ def generar_html(entrada: Path, salida: Path) -> None:
     p {{ background: #f5f5f5; padding: .5rem; border-radius: 4px; }}
     article.conocida {{ background: #e8f5e9; border-color: #66bb6a; opacity: .75; }}
     article.conocida h3 {{ text-decoration: line-through; }}
-    button.estado {{ border: 0; background: transparent; color: #aaa; cursor: pointer; font-size: 1.1rem; padding: 0 .35rem; }}
-    button.estado:hover {{ color: #555; }}
-    article.conocida button.estado {{ color: #2e7d32; }}
+    article.tarjeta {{ cursor: pointer; }}
+    article.tarjeta:focus {{ outline: 2px solid #90caf9; }}
+    article.tarjeta.conocida {{ background: #e8f5e9; border-color: #66bb6a; opacity: .75; }}
   </style>
   <script>
     const ESTADOS = 'palabras-conocidas';
 
-    function actualizarEstado(boton) {{
+    function actualizarEstado(tarjeta) {{
       const conocida = JSON.parse(localStorage.getItem(ESTADOS) || '{{}}');
-      const lema = boton.dataset.lema;
+      const lema = tarjeta.dataset.lema;
       const activa = Boolean(conocida[lema]);
-      boton.closest('article').classList.toggle('conocida', activa);
-      boton.textContent = activa ? '✓' : '○';
-      boton.title = activa ? 'Marcar como pendiente' : 'Marcar como conocida';
-      boton.setAttribute('aria-label', boton.title);
+      tarjeta.classList.toggle('conocida', activa);
+      tarjeta.title = activa ? 'Marcar como pendiente' : 'Marcar como conocida';
     }}
 
-    function alternarEstado(boton) {{
+    function alternarEstado(tarjeta, event) {{
+      if (event.target.closest('details')) return;
       const conocida = JSON.parse(localStorage.getItem(ESTADOS) || '{{}}');
-      const lema = boton.dataset.lema;
+      const lema = tarjeta.dataset.lema;
       conocida[lema] = !conocida[lema];
       localStorage.setItem(ESTADOS, JSON.stringify(conocida));
-      actualizarEstado(boton);
+      actualizarEstado(tarjeta);
     }}
 
     function reiniciarEstados() {{
       localStorage.removeItem(ESTADOS);
-      document.querySelectorAll('.estado').forEach(actualizarEstado);
+      document.querySelectorAll('.tarjeta').forEach(actualizarEstado);
     }}
 
     document.addEventListener('DOMContentLoaded', () => {{
