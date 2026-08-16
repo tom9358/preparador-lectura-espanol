@@ -4,5 +4,6 @@ version = "0.1.0"
 description = "Prepara lecturas en español con lematización y niveles CEFR."
 requires-python = ">=3.11"
 dependencies = [
-    "spacy>=3.8,<4",
+    "spacy>=3.8,<3.9",
+    "es-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.8.0/es_core_news_sm-3.8.0-py3-none-any.whl",
 ]

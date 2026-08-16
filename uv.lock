@@ -338,6 +338,14 @@ wheels = [
 ]
 
 [[package]]
+name = "es-core-news-sm"
+version = "3.8.0"
+source = { url = "https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.8.0/es_core_news_sm-3.8.0-py3-none-any.whl" }
+wheels = [
+    { url = "https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.8.0/es_core_news_sm-3.8.0-py3-none-any.whl", hash = "sha256:e451a83d6df79b87e9eed0cb553f03e99e36a3bab18a7b79f0dcfd1fdf875e12" },
+]
+
+[[package]]
 name = "h11"
 version = "0.16.0"
 source = { registry = "https://pypi.org/simple" }
@@ -718,11 +726,15 @@ name = "preparador-lectura-espanol"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "es-core-news-sm" },
     { name = "spacy" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "spacy", specifier = ">=3.8,<4" }]
+requires-dist = [
+    { name = "es-core-news-sm", url = "https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.8.0/es_core_news_sm-3.8.0-py3-none-any.whl" },
+    { name = "spacy", specifier = ">=3.8,<3.9" },
+]
 
 [[package]]
 name = "preshed"
