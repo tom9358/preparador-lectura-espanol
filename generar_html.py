@@ -100,7 +100,7 @@ def generar_html(entrada: Path, salida: Path) -> None:
     }}
 
     document.addEventListener('DOMContentLoaded', () => {{
-      document.querySelectorAll('.estado').forEach(actualizarEstado);
+      document.querySelectorAll('.tarjeta').forEach(actualizarEstado);
     }});
 
     async function cargarTatoeba(detalle) {{
