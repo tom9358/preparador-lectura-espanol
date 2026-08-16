@@ -37,6 +37,15 @@ uv run python generar_html.py
 El resultado es `vocabulario-dificil.html`. Ábrelo en un navegador; el progreso
 se guarda localmente y los ejemplos de Tatoeba se cargan desde el navegador.
 
+## Estado actual
+
+Es un prototipo: varias decisiones todavía están **hardcoded** para el ejemplo
+español. En particular, los nombres de archivo, el modelo `es_core_news_sm`,
+los niveles `A1`–`C1`, las columnas de ELELex, los umbrales de selección y los
+idiomas `spa`, `nld` y `eng` de Tatoeba. Para reutilizarlo en otro caso hay que
+modificar esos valores y adaptar los scripts; todavía no existe una
+configuración general por proyecto o por idioma.
+
 ## Adaptar el proyecto
 
 1. Sustituye `subtitulos-limpios.txt` por el texto que quieras estudiar.
@@ -65,4 +74,5 @@ los subtítulos, corpus, modelos y ejemplos que redistribuyas.
 
 ## Licencia
 
-Código del proyecto: MIT. Véase `LICENSE`.
+Código del proyecto: MIT. Véase `LICENSE`. Para citarlo, consulta
+`CITATION.cff`.
