@@ -1,52 +1,56 @@
-# Preparador de lectura en español
+# Preparador de lectura
 
-Herramienta para preparar la lectura en español mediante lemas, niveles CEFR
-y vocabulario especializado.
+Prepara una lectura o una película en otro idioma: extrae vocabulario,
+lo lematiza, lo relaciona con niveles CEFR y muestra ejemplos con contexto.
+La vista HTML permite marcar las palabras ya conocidas.
 
-## Flujo
+Este repositorio usa subtítulos de *Encanto* como ejemplo. El mismo flujo
+puede adaptarse a otros textos, idiomas y recursos léxicos; por ejemplo, una
+persona china aprendiendo sueco puede usar subtítulos suecos, un modelo spaCy
+sueco y una lista CEFR sueca.
 
-1. Limpia los subtítulos:
+## Ejemplo: preparar una película
 
-   ```powershell
-   uv run python limpiar_subtitulos.py
-   ```
+Coloca el archivo `.srt` y `ejemplo-encanto/limpiar_subtitulos.py` juntos en
+una carpeta. El script elimina numeración, tiempos y metadatos, y conserva
+solo los diálogos:
 
-2. Lematiza el texto y guarda los contextos:
+```powershell
+uv run python limpiar_subtitulos.py
+```
 
-   ```powershell
-   uv run python lematizar.py
-   ```
+El resultado es `subtitulos-limpios.txt`. Este paso es opcional si ya tienes
+texto limpio, pero resulta útil para preparar vocabulario antes de ver una
+película.
 
-3. Cruza los lemas con ELELex:
+## Flujo de análisis
 
-   ```powershell
-   uv run python cruzar_cefrlex.py
-   ```
+Desde la raíz del proyecto:
 
-4. Selecciona B2/C1 y los B1 con evidencia en niveles superiores:
+```powershell
+uv run python lematizar.py
+uv run python cruzar_cefrlex.py
+uv run python seleccionar_palabras.py
+uv run python generar_html.py
+```
 
-   ```powershell
-   uv run python seleccionar_palabras.py
-   ```
+El resultado es `vocabulario-dificil.html`. Ábrelo en un navegador; el progreso
+se guarda localmente y los ejemplos de Tatoeba se cargan desde el navegador.
 
-5. Genera la vista para estudiar:
+## Adaptar el proyecto
 
-   ```powershell
-   uv run python generar_html.py
-   ```
+1. Sustituye `subtitulos-limpios.txt` por el texto que quieras estudiar.
+2. Cambia el modelo de spaCy en `pyproject.toml` por el idioma de destino
+   (`es_core_news_sm`, `sv_core_news_sm`, etc.).
+3. Ajusta las columnas y los niveles de `ELELex.tsv` al recurso léxico de ese
+   idioma. Si su formato es diferente, adapta `cruzar_cefrlex.py`.
+4. Configura `generar_html.py` y Tatoeba con los códigos ISO del idioma de
+   aprendizaje y de la traducción.
 
-La vista resultante es `vocabulario-dificil.html`.
+Los niveles calculados son heurísticos, no clasificaciones oficiales. La
+licencia MIT cubre el código propio. Comprueba por separado las licencias de
+los subtítulos, corpus, modelos y ejemplos que redistribuyas.
 
-## Selección de palabras
+## Licencia
 
-`cruzar_cefrlex.py` conserva los datos de ELELex sin convertirlos en una
-clasificación oficial. `seleccionar_palabras.py` aplica una heurística:
-
-- `B2/C1`: la palabra tiene como nivel mínimo observado B2 o C1.
-- `B1 con evidencia B2/C1`: su nivel mínimo observado es B1, pero aparece en
-  al menos dos documentos de B2 o C1.
-
-El nivel mínimo observado es el primer nivel, de A1 a C1, donde ELELex registra
-frecuencia positiva y presencia en al menos dos documentos. `nb_doc` cuenta
-documentos, no apariciones. Una palabra ausente o con evidencia insuficiente
-queda fuera de la selección; esto no significa que sea necesariamente difícil.
+Código del proyecto: MIT. Véase `LICENSE`.
