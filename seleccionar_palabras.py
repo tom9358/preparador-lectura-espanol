@@ -16,6 +16,7 @@ def nivel_minimo(fila: dict[str, str]) -> str:
 
 
 def seleccionar(entrada: Path, salida: Path) -> None:
+    """Selecciona B2/C1 y los B1 con evidencia en niveles superiores."""
     with entrada.open(encoding="utf-8-sig", newline="") as archivo:
         filas = list(csv.DictReader(archivo, delimiter="\t"))
 
