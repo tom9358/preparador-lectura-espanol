@@ -67,6 +67,9 @@ def generar_html(entrada: Path, salida: Path) -> None:
     article.tarjeta {{ cursor: pointer; }}
     article.tarjeta:focus {{ outline: 2px solid #90caf9; }}
     article.tarjeta.conocida {{ background: #e8f5e9; border-color: #66bb6a; opacity: .75; }}
+    header {{ display: flex; align-items: center; justify-content: space-between; gap: 1rem; }}
+    button.reset {{ border: 1px solid #ccc; border-radius: 999px; background: transparent; color: #666; cursor: pointer; padding: .35rem .7rem; }}
+    button.reset:hover {{ background: #f5f5f5; color: #222; }}
   </style>
   <script>
     const ESTADOS = 'palabras-conocidas';
@@ -137,8 +140,10 @@ def generar_html(entrada: Path, salida: Path) -> None:
   </script>
 </head>
 <body>
-  <h1>Vocabulario difícil</h1>
-  <button onclick="reiniciarEstados()">Reiniciar palabras conocidas</button>
+  <header>
+    <h1>Vocabulario difícil</h1>
+    <button class="reset" onclick="reiniciarEstados()">Reiniciar progreso</button>
+  </header>
   {"".join(secciones)}
 </body>
 </html>
