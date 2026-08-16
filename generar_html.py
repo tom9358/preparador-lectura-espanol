@@ -87,6 +87,11 @@ def generar_html(entrada: Path, salida: Path) -> None:
       actualizarEstado(boton);
     }}
 
+    function reiniciarEstados() {{
+      localStorage.removeItem(ESTADOS);
+      document.querySelectorAll('.estado').forEach(actualizarEstado);
+    }}
+
     document.addEventListener('DOMContentLoaded', () => {{
       document.querySelectorAll('.estado').forEach(actualizarEstado);
     }});
@@ -132,6 +137,7 @@ def generar_html(entrada: Path, salida: Path) -> None:
 </head>
 <body>
   <h1>Vocabulario difícil</h1>
+  <button onclick="reiniciarEstados()">Reiniciar palabras conocidas</button>
   {"".join(secciones)}
 </body>
 </html>
