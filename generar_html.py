@@ -70,11 +70,14 @@ def generar_html(entrada: Path, salida: Path) -> None:
     article.tarjeta:focus {{ outline: 2px solid #90caf9; }}
     article.tarjeta.conocida {{ background: #e8f5e9; border-color: #66bb6a; opacity: .75; }}
     header {{ display: flex; align-items: center; justify-content: space-between; gap: 1rem; }}
+    .controles {{ display: flex; align-items: center; gap: .5rem; }}
     button.reset {{ border: 1px solid #ccc; border-radius: 999px; background: transparent; color: #666; cursor: pointer; padding: .35rem .7rem; }}
     button.reset:hover {{ background: #f5f5f5; color: #222; }}
-    details.ayuda {{ color: #666; font-size: .9rem; }}
-    details.ayuda summary {{ cursor: pointer; }}
-    details.ayuda p {{ background: transparent; margin: .3rem 0; padding: 0; }}
+    .ayuda-contenedor {{ position: relative; display: inline-block; }}
+    button.ayuda {{ border: 1px solid #ccc; border-radius: 999px; background: transparent; color: #666; cursor: pointer; padding: .35rem .7rem; }}
+    .burbuja-ayuda {{ position: absolute; z-index: 10; right: 0; top: 2.4rem; width: 270px; border: 1px solid #ddd; border-radius: 10px; background: white; box-shadow: 0 5px 18px #0002; color: #555; font-size: .9rem; padding: .8rem 1rem; }}
+    .burbuja-ayuda p {{ background: transparent; margin: .3rem 0; padding: 0; }}
+    .oculta {{ display: none; }}
     footer {{ margin: 2rem 0; color: #777; font-size: .85rem; text-align: center; }}
   </style>
   <script>
@@ -100,6 +103,10 @@ def generar_html(entrada: Path, salida: Path) -> None:
     function reiniciarEstados() {{
       localStorage.removeItem(ESTADOS);
       document.querySelectorAll('.tarjeta').forEach(actualizarEstado);
+    }}
+
+    function alternarAyuda() {{
+      document.querySelector('.burbuja-ayuda').classList.toggle('oculta');
     }}
 
     document.addEventListener('DOMContentLoaded', () => {{
@@ -147,13 +154,15 @@ def generar_html(entrada: Path, salida: Path) -> None:
 <body>
   <header>
     <h1>Vocabulario difícil</h1>
-    <div>
-      <details class="ayuda">
-        <summary>Ayuda</summary>
+    <div class="controles">
+      <div class="ayuda-contenedor">
+        <button class="ayuda" onclick="alternarAyuda()">Ayuda</button>
+        <div class="burbuja-ayuda oculta">
         <p>Pulsa una tarjeta para marcar o desmarcar la palabra como conocida.</p>
         <p>Abre SRT para ver el contexto de la película o Tatoeba para cargar ejemplos y traducciones.</p>
         <p>El progreso se guarda en este navegador. “Reiniciar progreso” lo borra.</p>
-      </details>
+        </div>
+      </div>
       <button class="reset" onclick="reiniciarEstados()">Reiniciar progreso</button>
     </div>
   </header>
