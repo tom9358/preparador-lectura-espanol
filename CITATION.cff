@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "Preparador de lectura"
+message: "Si utilizas este proyecto, cita esta versión."
+type: software
+authors:
+  - family-names: "Tom9358"
+    given-names: "Tom9358"
+repository-code: "https://github.com/tom9358/preparador-lectura-espanol"
+license: MIT
+version: "0.1.0"
+date-released: "2026-08-16"
