@@ -124,8 +124,7 @@ def generar_html(entrada: Path, salida: Path) -> None:
             .filter(traduccion => traduccion.lang === idioma)
             .map(traduccion => `<p>${{traduccion.text}}</p>`).join('');
           return `<details><summary>${{frase.text}}</summary>
-            <details><summary>Traducciones (${{idioma}})</summary>
-            ${{traducciones}}</details></details>`;
+            ${{traducciones}}</details>`;
         }}).join('');
         detalle.dataset.cargado = 'true';
         return;
